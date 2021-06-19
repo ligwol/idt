@@ -1,0 +1,32 @@
+$primaryColor: #269f58;
+$secondaryColor: #ffffff;
+
+@mixin text($font, $color, $txt-trf, $fst, $fw, $fs, $lh) {
+    font-family: $font;
+    color: $color;
+    text-decoration: none;
+    text-transform: $txt-trf;
+    font-style: $fst;
+    font-weight: $fw;
+    font-size: $fs;
+}
+
+h1{
+    color: red;
+    h2{
+        color: blue;
+    }
+}
+.hder{
+    width: 100%;
+    height: 100vh; 
+    background: url(../../images/background-2.png) right top no-repeat, url(../../images/background-1.png) no-repeat; 
+    .hder__nav{
+        display: flex;
+        flex-direction: row;
+        .hder__logo{
+            width: 147px;
+            height: 47px;
+        }
+    }
+}

@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+  <div class="main">
+    <landing/>
+  </div>
+</template> 
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import landing from './components/landing.vue'
 export default {
-  name: 'App',
+  name: 'Page',
   components: {
-    HelloWorld
+    landing,
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    :root{
+      font-family: 'Montserrat', sans-serif;
+    }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
 </style>
