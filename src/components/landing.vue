@@ -1,7 +1,7 @@
 <template>
     <div class="first-page">
         <header class="hder"
-        :class="{change_color: scrollPosition > 50}"
+        :class="{change_color: scrollPosition > 100}"
         >
             <div class="hder__menu">
                 <a href="#">
@@ -17,8 +17,11 @@
                     <a href="#contakts">contakts</a>
                 </nav>
             </div>
-            <div class="hder__phone">
-                <p>+422 2222222</p> <i class="fas fa-phone"></i>
+            <div class="hder__phone"
+            :class="{change_color: scrollPosition > 100}"
+            >
+                <p>+422 2222222</p> 
+                <i class="fas fa-phone"></i>
             </div>
         </header>
     </div>
@@ -49,5 +52,6 @@
     @import "./../assets/style.scss";
     .change_color {
        background-color:#fff;
+       color: #269f58 !important;
    }
 </style>

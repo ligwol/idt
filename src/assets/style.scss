@@ -90,4 +90,14 @@ $tertiaryColor: #323232;
             color: $primaryColor;
         }
     }
+    .change_color {
+        background-color:#fff;
+        p{
+            @include text($tertiaryColor, lowercase, normal, 500, 14px);
+        }
+        i{
+            background-color: $primaryColor;
+            color: $secondaryColor;
+        }
+    }
 }
