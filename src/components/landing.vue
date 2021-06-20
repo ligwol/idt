@@ -1,6 +1,8 @@
 <template>
     <div class="first-page">
-        <header class="hder">
+        <header class="hder"
+        :class="{change_color: scrollPosition > 50}"
+        >
             <div class="hder__menu">
                 <a href="#">
                     <img class="hder__logo" src="../../images/logo.png" alt="">
@@ -26,10 +28,26 @@
 
 <script>
     export default {
-        name: "landing"
+        name: "landing",
+        data: function () {
+            return{
+                scrollPosition: null
+            }
+        },
+        methods: {
+            updateScroll() {
+                this.scrollPosition = window.scrollY
+            }
+        },
+        mounted() {
+            window.addEventListener('scroll', this.updateScroll);
+        }
     }
 </script>
 
 <style lang="scss">
     @import "./../assets/style.scss";
+    .change_color {
+       background-color:#fff;
+   }
 </style>
