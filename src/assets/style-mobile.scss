@@ -1,0 +1,121 @@
+$primaryColor: #269f58;
+$secondaryColor: #ffffff;
+$tertiaryColor: #323232;
+
+@mixin text($color, $txt-trf, $fst, $fw, $fs) {
+    color: $color;
+    text-decoration: none;
+    text-transform: $txt-trf;
+    font-style: $fst;
+    font-weight: $fw;
+    font-size: $fs;
+}
+
+.hder__menu {
+    padding: 70px;
+    width: calc(100%-60px);
+    height: 100vh;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 5;
+
+    .hder__nav {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            font-size: 18px;
+            color: #232323;
+            text-decoration: none;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+    }
+
+    .hder__phone {
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+        color: #232323;
+        text-decoration: none;
+        font-weight: 600;
+
+        i {
+            padding-right: 10px;
+        }
+    }
+}
+
+.home__page{
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .home__text{
+        text-align: center;
+        h1{
+            @include text($tertiaryColor, uppercase, none, 800, 40px);
+            b{
+                @include text($primaryColor, uppercase, none, 800, 60px);
+            }
+        }
+    }
+}
+
+.home__form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .home__button {
+        height: 55px;
+        width: 250px;
+        background-color: $primaryColor;
+        padding: 0 18px;
+        border-radius: 5px;
+        margin-top: 35px;
+        border: 0;
+        @include text($secondaryColor, lowercase, normal, 600, 16px);
+        cursor: pointer;
+    }
+
+    .form__put-in {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+
+        .form__label {
+            display: flex;
+            flex-direction: column;
+            padding-right: 40px;
+
+            label {
+                @include text($tertiaryColor, none, normal, 700, 14px);
+                padding-bottom: 7px;
+            }
+
+            .fome__input {
+                height: 55px;
+                width: 250px;
+                background-color: #f2f3f8;
+                padding: 0 18px;
+                border-radius: 5px;
+                border: 0;
+                border-color: $primaryColor;
+                @include text($primaryColor, none, normal, 600, 16px);
+
+                &::placeholder {
+                    @include text(#bebebe, none, normal, 600, 16px);
+                }
+
+                &:focus {
+                    //background-color: #608f8f;
+                    outline: 1px solid;
+                    outline-color: $primaryColor;
+                    border-color: $primaryColor;
+                }
+            }
+        }
+    }
+}

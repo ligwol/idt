@@ -1,24 +1,30 @@
 <template>
   <div class="main">
 
-    <div class="home__mobile" v-if="mobileView">
+    <div class="home__mobile-hder" v-if="mobileView">
       <div class="hder__click-button" @click="showNav = !showNav" :class="{icon__open:showNav}">
         <i id ="hder__icon" class="fas fa-ellipsis-v"></i>
       </div>
       <div class="hder__close" :class="{hder__open:showNav}">
         <HeaderMobile />
       </div>
+      <div class="home__mobile">
+        <HomeMobile/>
+      </div>      
     </div>
 
     <div class="home" v-if="!mobileView">
         <Header />
     </div>
+    <About/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import HeaderMobile from './components/HeaderMobile.vue'
+import HomeMobile from './components/HomeMobile.vue'
+import About from './components/About.vue'
 export default {
   name: 'Page',
   data: function (){
@@ -35,6 +41,8 @@ export default {
   components: {
     Header,
     HeaderMobile,
+    HomeMobile,
+    About,
   },
   created() {
     this.handleView();
@@ -53,7 +61,7 @@ export default {
       scroll-behavior: smooth;
     }
 
-    .home__mobile {
+    .home__mobile-hder {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;

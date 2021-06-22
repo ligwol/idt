@@ -16,14 +16,16 @@ $tertiaryColor: #323232;
     background: url(../../images/background-2.png) right top no-repeat, url(../../images/background-1.png) no-repeat; 
     width: 100%;
     height: 100vh;
-    padding: 20px 2em;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .hder{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    padding: 20px 2em;
+    
     position: sticky;
     // background-color: none;
     top: 0;
@@ -105,11 +107,11 @@ $tertiaryColor: #323232;
     background-color:#fff;
 }
 
-/****************/
+/********************HOME**********************/
 
 
 .home__text{
-    padding: 85px 0 110px 0;
+    padding: 85px 40px 110px 40px;
     h1{
         @include text($tertiaryColor, uppercase, normal, 700, 41px);
     }
@@ -118,5 +120,130 @@ $tertiaryColor: #323232;
     }
     p{
         @include text($tertiaryColor, none, normal, 500, 14px);
+        width: 400px;
+    }
+}
+
+.home__form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 40px;
+    .home__button{
+        height: 55px;
+        width: 200px;
+        background-color: $primaryColor;
+        padding: 0 18px;
+        border-radius: 5px;
+        margin-top: 35px;
+        border: 0;
+        @include text($secondaryColor, lowercase, normal, 600, 16px);
+        cursor: pointer;
+    }
+
+    .form__put-in{
+        display: flex;
+        flex-direction: row;
+        .form__label{
+            display: flex;
+            flex-direction: column;
+            padding-right: 40px;
+            label{
+                @include text($tertiaryColor, none, normal, 700, 14px);
+                padding-bottom: 7px;
+            }
+            .fome__input{
+                height: 55px;
+                width: 250px;
+                background-color: #f2f3f8;
+                padding: 0 18px;
+                border-radius: 5px;
+                border: 0;
+                border-color: $primaryColor;
+                @include text($primaryColor, none, normal, 600, 16px);
+                &::placeholder{
+                    @include text(#bebebe, none, normal, 600, 16px);
+                }
+                &:focus{
+                    //background-color: #608f8f;
+                    outline: 1px solid;
+                    outline-color: $primaryColor;
+                    border-color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*****************About Us******************/
+
+
+// linear-gradient(70deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+.about-us{
+    display: flex;
+    flex-direction: row;
+    padding: 0 40px;
+    height: 100vh;
+    .about-us__section{
+        flex-basis: 50%;
+        background-image: url(../../images/about-us.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50px 50px;
+        @include text($primaryColor, none, normal, 700, 36px);
+        p{
+            padding-top: 25px;
+        }
+    }
+    .about-us__aside{
+        flex-basis: 50%;
+        padding-left: 20px;
+        .about-us__list{
+            display: flex;
+            flex-direction: column;
+            .about-us__point{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                .about-us__big-point{
+                    background-color: $tertiaryColor;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    padding-right: 10px;
+                }
+                .about-us__icon{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 70px;
+                    padding: 0 50px;
+                    box-sizing: border-box;
+                    i{
+                        font-size: 50px;
+                        box-sizing: content-box;
+                        color: $primaryColor;
+                    }
+                }
+                
+            }
+
+            .about-us__bullets{
+                .bullet{
+                    width: 5px;
+                    height: 5px;
+                    background-color: $primaryColor;
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                    box-sizing: border-box;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
     }
 }

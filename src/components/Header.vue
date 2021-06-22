@@ -33,11 +33,19 @@
 
         <div class="home__form">
             <form>
-                <label for="fname">Name</label>
-                <input class="fome__input" type="text">
-                <label for="fphone">Phone number</label>
-                <input class="fome__input" type="tel" placeholder="+4333 33333333" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-                <input class="home__button" type="submit" value="contact us">
+                <div class="form__put-in">
+                    <div class="form__label">
+                        <label for="fname">Name</label>
+                        <input class="fome__input fname" type="text" placeholder="Lorem ipsum">
+
+                    </div>
+                    <div class="form__label">
+                        <label for="fphone">Phone number</label>
+                        <input class="fome__input fphone" type="tel" placeholder="+4333 33333333"
+                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    </div>
+                </div>
+                <input class="home__button" type="submit" value="contact us" >
             </form>
         </div>
     </div>
