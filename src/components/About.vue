@@ -77,4 +77,17 @@ export default {
 
 <style lang="scss" scoped>
     @import "./../assets/style.scss";
+    @media  screen and(max-width: 1140px) {
+        .about-us{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding-bottom: 20px;
+            .about-us__section{
+                background-image: none;
+                padding-bottom: 40px;
+            }
+            
+        }
+    }
 </style>

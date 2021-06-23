@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-
     <div class="home__mobile-hder" v-if="mobileView">
       <div class="hder__click-button" @click="showNav = !showNav" :class="{icon__open:showNav}">
         <i id ="hder__icon" class="fas fa-ellipsis-v"></i>
@@ -16,7 +15,8 @@
     <div class="home" v-if="!mobileView">
         <Header />
     </div>
-    <About/>
+    <About />
+    <OurTechnologies />
   </div>
 </template>
 
@@ -25,6 +25,7 @@ import Header from './components/Header.vue'
 import HeaderMobile from './components/HeaderMobile.vue'
 import HomeMobile from './components/HomeMobile.vue'
 import About from './components/About.vue'
+import OurTechnologies from './components/OurTechnologies.vue'
 export default {
   name: 'Page',
   data: function (){
@@ -43,6 +44,7 @@ export default {
     HeaderMobile,
     HomeMobile,
     About,
+    OurTechnologies,
   },
   created() {
     this.handleView();
@@ -66,9 +68,10 @@ export default {
       flex-direction: column;
       justify-content: flex-start;
 
-      .hder__close{
+      .hder__close {
         display: none;
-        &.hder__open{
+
+        &.hder__open {
           display: block;
         }
       }
@@ -85,8 +88,9 @@ export default {
           z-index: 100;
           transition: 300ms ease;
         }
-        &.icon__open{
-          i{
+
+        &.icon__open {
+          i {
             transform: rotate(90deg);
           }
         }
