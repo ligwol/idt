@@ -80,4 +80,9 @@
 
 <style lang="scss" scoped>
     @import "./../assets/style.scss";
+    @media screen and (max-width: 1140px){
+        .hder{
+            display: none;
+        }
+    }
 </style>

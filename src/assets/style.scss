@@ -10,12 +10,10 @@ $tertiaryColor: #323232;
     font-weight: $fw;
     font-size: $fs;
 }
-
-
 .home__page{
     background: url(../../images/background-2.png) right top no-repeat, url(../../images/background-1.png) no-repeat; 
     width: 100%;
-    height: 100%;
+    height: 100vh;
     box-sizing: border-box;
     margin: 0;
 }
@@ -25,8 +23,8 @@ $tertiaryColor: #323232;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 2em;
-    
-    position: sticky;
+    width: 100%;
+    position: fixed;
     // background-color: none;
     top: 0;
 
@@ -276,8 +274,27 @@ $tertiaryColor: #323232;
             align-items: center;
             .technologies__logo{
                 padding: 3vw;
+                opacity: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                p{
+                    display: none;
+                }
                 img{
                     width: 5vw;
+                }
+                &.active{
+                    opacity: 100%;
+                    transform: scale(1.5);
+                    padding: 1.5;
+                    p{
+                        display: block;
+                        @include text($tertiaryColor, none, normal, 500, 16px);
+                        padding-top: 10px;
+                    }
                 }
             }
         }
@@ -287,6 +304,7 @@ $tertiaryColor: #323232;
         background-image: url(../../images/our-technologies.png);
         background-repeat: no-repeat;
         background-size: 100%;
+        height: 100vh;
         .technologies__info{
             padding: 70px 200px 100px 70px;
             h2{
@@ -298,17 +316,5 @@ $tertiaryColor: #323232;
                 @include text($secondaryColor, none, normal, 400, 14px);
             }
         }
-        // .twilio{
-        //     display: none;
-        //     &.active{
-        //         display: block;
-        //     }
-        // }
-        // .android{
-        //     display: none;
-        //     &.active{
-        //         display: block;
-        //     }
-        // }
     }
 }

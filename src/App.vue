@@ -56,39 +56,32 @@ export default {
     :root {
       font-family: 'Montserrat', sans-serif;
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       scroll-behavior: smooth;
     }
-
     .home__mobile-hder {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-
       .hder__close {
         display: none;
-
         &.hder__open {
           display: block;
         }
       }
-
       /*Mobile icon*/
       .hder__click-button {
         padding: 20px;
         cursor: pointer;
         z-index: 100;
-
         #hder__icon {
           font-size: 30px;
           color: #232323;
           z-index: 100;
           transition: 300ms ease;
         }
-
         &.icon__open {
           i {
             transform: rotate(90deg);

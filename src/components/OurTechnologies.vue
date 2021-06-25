@@ -5,38 +5,49 @@
                 Our technologies
             </p>
             <div class="technologies">
-                <div class="technologies__logo" @click="showTwilioFun">
+                <div class="technologies__logo" @click="showTwilioFun" :class="showTwilio? {active:showFull}: null">
                     <img src="../../images/twilio.png" alt="Twilio">
+                    <p>Twilio</p>
                 </div>
-                <div class="technologies__logo" @click="showAndroidFun">
+                <div class="technologies__logo" @click="showAndroidFun" :class="showAndroid? {active:showFull}: null">
                     <img src="../../images/android.png" alt="Android">
+                    <p>Android SDK</p>
                 </div>
-                <div class="technologies__logo" @click="showRaspberryFun">
+                <div class="technologies__logo" @click="showRaspberryFun" :class="showRaspberry? {active:showFull}: null">
                     <img src="../../images/raspberry.png" alt="Raspberry">
+                    <p>Raspberry</p>
                 </div>
-                <div class="technologies__logo" @click="showVueFun">
+                <div class="technologies__logo"  @click="showVueFun" :class="showVue? {active:showFull}: null">
                     <img src="../../images/vue.png" alt="Vue">
+                    <p>Vue</p>
                 </div>
-                <div class="technologies__logo" @click="showTesseractFun">
+                <div class="technologies__logo" @click="showTesseractFun" :class="showTesseract? {active:showFull}: null">
                     <img src="../../images/tesseract.png" alt="Tesseract">
+                    <p>Tesseract</p>
                 </div>
-                <div class="technologies__logo" @click="showMongooseFun">
+                <div class="technologies__logo" @click="showMongooseFun" :class="showMongoose? {active:showFull}: null">
                     <img src="../../images/mongoose.png" alt="Mongoose">
+                    <p>Mongoose</p>
                 </div>
-                <div class="technologies__logo" @click="showPythonFun">
+                <div class="technologies__logo" @click="showPythonFun" :class="showPython? {active:showFull}: null">
                     <img src="../../images/python.png" alt="Python">
+                    <p>Python</p>
                 </div>
-                <div class="technologies__logo" @click="showDjangoFun">
+                <div class="technologies__logo" @click="showDjangoFun" :class="showDjango? {active:showFull}: null">
                     <img src="../../images/django.png" alt="Django">
+                    <p>Django</p>
                 </div>
-                <div class="technologies__logo" @click="showMariaDBFun">
+                <div class="technologies__logo" @click="showMariaDBFun" :class="showMariaDB? {active: showFull}: null">
                     <img src="../../images/mariaDB.png" alt="MariaDB">
+                    <p>MariaDB</p>
                 </div>
-                <div class="technologies__logo" @click="showSpringFun">
+                <div class="technologies__logo" @click="showSpringFun" :class="showSpring? {active: showFull}: null">
                     <img src="../../images/spring.png" alt="django">
+                    <p>Django</p>
                 </div>
-                <div class="technologies__logo" @click="showMongoDBFun">
-                    <img src="../../images/mongodb.png" alt="django">
+                <div class="technologies__logo" @click="showMongoDBFun" :class="showMongoDB? { active : showFull }: null">
+                    <img src="../../images/mongodb.png" alt="mongoDB">
+                    <p>MongoDB</p>
                 </div>
             </div>
         </section>
@@ -152,7 +163,7 @@
                     MongoDB
                 </h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, nihil quibusdam cupiditate ad consequatur quam maxime fugit neque reprehenderit soluta temporibus quia debitis sequi ducimus autem! In id sit minima?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores pariatur harum sequi recusandae velit ab excepturi porro voluptates facilis numquam mollitia neque saepe amet, adipisci quisquam, minima quod repudiandae in.
                 </p>
             </div>
         </aside>
@@ -175,6 +186,7 @@ export default {
         showMariaDB: false,
         showSpring: false,
         showMongoDB: false,
+        showFull: true,
         } 
     },
     methods: {
@@ -309,7 +321,7 @@ export default {
             this.showMongoDB = false;
         },
         showMongoDBFun(){
-            this.showMongoDb = !this.showMongoDB;
+            this.showMongoDB = !this.showMongoDB;
             this.showTwilio = false;
             this.showRaspberry = false;
             this.showVue = false;
@@ -320,12 +332,17 @@ export default {
             this.showAndroid = false;
             this.showMariaDB = false;
             this.showSpring = false;
-        }
-
+        },
     }
 }
 </script>
 
 <style lang="scss" scoped>
     @import "./../assets/style.scss";
+    @media screen and (max-width: 1140px){
+        .our-technologies{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 </style>
