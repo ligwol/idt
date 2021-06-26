@@ -345,7 +345,7 @@ export default {
             flex-direction: column;
             background: none;
             margin: 0 auto;
-            padding: 50px;
+            padding: 40px;
             .our-technologies__section{
                 .technologies{
                     .technologies__logo{

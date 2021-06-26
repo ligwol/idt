@@ -267,10 +267,11 @@ $tertiaryColor: #323232;
     flex-direction: row;
     height: 100vh;
     padding: 0 0 20px 40px;
-    background-image: url(../../images/our-technologies.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top right -40%;
+    // background-image: url(../../images/our-technologies.png);
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: top right;
+    position: relative;
 
     .our-technologies__section{
         flex-basis: 50%;
@@ -312,10 +313,12 @@ $tertiaryColor: #323232;
     .our-technologies__aside{
         flex-basis: 50%;
         height: 1;
-        // background-image: url(../../images/our-technologies.png);
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // background-position: right;
+        background-image: url(../../images/our-technologies.png);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: right;
+        background-color: $primaryColor;
+        border-radius: 50px 0 0 50px;
         .technologies__info{
             padding: 70px 200px 100px 70px;
             h2{
