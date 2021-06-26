@@ -180,7 +180,7 @@ export default {
         showRaspberry: false,
         showVue: false,
         showTesseract: false,
-        showMongoose: false,
+        showMongoose: true,
         showPython: false,
         showDjango: false,
         showMariaDB: false,
@@ -343,6 +343,32 @@ export default {
         .our-technologies{
             display: flex;
             flex-direction: column;
+            background: none;
+            margin: 0 auto;
+            padding: 50px;
+            .our-technologies__section{
+                .technologies{
+                    .technologies__logo{
+                        &.active{
+                            p{
+                                @include text($tertiaryColor, none, normal, 500, 0.5rem);
+                                padding-top: 0.1rem;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .our-technologies__aside{
+                .technologies__info.technologies__info{
+                    padding: 70px;
+                    background-image: url(../../images/background-3.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 50px;
+                }
+            }
         }
     }
 </style>

@@ -12,7 +12,7 @@
                     </a>
                     <a href="#about-us">about us</a>
                     <a href="#our-technologies">our technologies</a>
-                    <a href="#contakts">contakts</a>
+                    <a href="#contacts">contakts</a>
                 </nav>
             </div>
             <div class="hder__phone" :class="{change_color: scrollPosition > 100}">
@@ -45,7 +45,7 @@
                             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                     </div>
                 </div>
-                <input class="home__button" type="submit" value="contact us" >
+                <input class="button" type="submit" value="contact us" >
             </form>
         </div>
     </div>

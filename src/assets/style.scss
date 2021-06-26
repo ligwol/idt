@@ -13,9 +13,11 @@ $tertiaryColor: #323232;
 .home__page{
     background: url(../../images/background-2.png) right top no-repeat, url(../../images/background-1.png) no-repeat; 
     width: 100%;
-    height: 100vh;
+    height: 120%;
+    background-size: contain;
     box-sizing: border-box;
     margin: 0;
+    padding-top: 100px;
 }
 
 .hder{
@@ -27,6 +29,7 @@ $tertiaryColor: #323232;
     position: fixed;
     // background-color: none;
     top: 0;
+    z-index: 10;
 
     .hder__menu{
         display: flex;
@@ -106,6 +109,8 @@ $tertiaryColor: #323232;
 }
 
 /********************HOME**********************/
+/********************HOME**********************/
+/********************HOME**********************/
 
 
 .home__text{
@@ -126,48 +131,48 @@ $tertiaryColor: #323232;
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 0 40px;
-    .home__button{
-        height: 55px;
-        width: 200px;
-        background-color: $primaryColor;
-        padding: 0 18px;
-        border-radius: 5px;
-        margin-top: 35px;
-        border: 0;
-        @include text($secondaryColor, lowercase, normal, 600, 16px);
-        cursor: pointer;
-    }
+    padding: 0 40px;    
+}
 
-    .form__put-in{
+.button{
+    height: 55px;
+    width: 200px;
+    background-color: $primaryColor;
+    padding: 0 18px;
+    border-radius: 5px;
+    margin-top: 35px;
+    border: 0;
+    @include text($secondaryColor, lowercase, normal, 600, 16px);
+    cursor: pointer;
+}
+.form__put-in{
+    display: flex;
+    flex-direction: row;
+    .form__label{
         display: flex;
-        flex-direction: row;
-        .form__label{
-            display: flex;
-            flex-direction: column;
-            padding-right: 40px;
-            label{
-                @include text($tertiaryColor, none, normal, 700, 14px);
-                padding-bottom: 7px;
+        flex-direction: column;
+        padding-right: 40px;
+        label{
+            @include text($tertiaryColor, none, normal, 700, 14px);
+            padding-bottom: 7px;
+        }
+        .fome__input{
+            height: 55px;
+            width: 250px;
+            background-color: #f2f3f8;
+            padding: 0 18px;
+            border-radius: 5px;
+            border: 0;
+            border-color: $primaryColor;
+            @include text($primaryColor, none, normal, 600, 16px);
+            &::placeholder{
+                @include text(#bebebe, none, normal, 600, 16px);
             }
-            .fome__input{
-                height: 55px;
-                width: 250px;
-                background-color: #f2f3f8;
-                padding: 0 18px;
-                border-radius: 5px;
-                border: 0;
+            &:focus{
+                //background-color: #608f8f;
+                outline: 1px solid;
+                outline-color: $primaryColor;
                 border-color: $primaryColor;
-                @include text($primaryColor, none, normal, 600, 16px);
-                &::placeholder{
-                    @include text(#bebebe, none, normal, 600, 16px);
-                }
-                &:focus{
-                    //background-color: #608f8f;
-                    outline: 1px solid;
-                    outline-color: $primaryColor;
-                    border-color: $primaryColor;
-                }
             }
         }
     }
@@ -182,7 +187,7 @@ $tertiaryColor: #323232;
 .about-us{
     display: flex;
     flex-direction: row;
-    padding: 0 40px;
+    padding: 80px 40px;
     height: 100%;
     margin-top: 100px;
     .about-us__section{
@@ -261,7 +266,11 @@ $tertiaryColor: #323232;
     display: flex;
     flex-direction: row;
     height: 100vh;
-    padding: 50px 0 20px 40px;
+    padding: 0 0 20px 40px;
+    background-image: url(../../images/our-technologies.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right -40%;
 
     .our-technologies__section{
         flex-basis: 50%;
@@ -272,6 +281,7 @@ $tertiaryColor: #323232;
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
+            flex-basis: 50%;
             .technologies__logo{
                 padding: 3vw;
                 opacity: 50%;
@@ -301,10 +311,11 @@ $tertiaryColor: #323232;
     }
     .our-technologies__aside{
         flex-basis: 50%;
-        background-image: url(../../images/our-technologies.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 100vh;
+        height: 1;
+        // background-image: url(../../images/our-technologies.png);
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        // background-position: right;
         .technologies__info{
             padding: 70px 200px 100px 70px;
             h2{
@@ -314,6 +325,195 @@ $tertiaryColor: #323232;
             }
             P{
                 @include text($secondaryColor, none, normal, 400, 14px);
+            }
+        }
+    }
+}
+
+
+/******************************************/
+/****************Contacts*****************/
+/****************************************/
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-image: url(../../images/background-4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 100px 0 50px 0;
+    height: 100%;
+    h2{
+        @include text($primaryColor, none, normal, 700, 36px);
+    }
+    .contacts__info{
+        display: flex;
+        flex-direction: row;
+        padding: 50px 50px 80px 50px;
+        .contacts__block{
+            padding-right:100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .contacts__icon{
+                padding: 15px;
+                background-color: $primaryColor;
+                border-radius: 50%;
+                color: $secondaryColor;
+                i{
+                    font-size: 20px;
+                }
+            }
+            p{
+                padding-left: 15px;
+            }
+        }
+    }
+
+    .contacts__links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .contacts__sns{
+            padding-right: 200px;
+            a{
+                padding-right: 20px;
+                img{
+                   width: 40px; 
+                }
+            }
+        }
+        .contacts__form{
+            outline: solid #bebebe;
+            outline-width: 1px;
+            background-color: #fff;
+            padding: 40px;
+            form{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .button{
+                    &:hover{
+                        box-shadow: inset 1px 2px 2px 1px rgba(0,0,0,0.1);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/*****************************/
+/*****************************/
+/**********FOOTER*************/
+/*****************************/
+/*****************************/
+
+.fter{
+    padding: 30px 20px 100px 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: $primaryColor;
+    .fter__menu{
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px 0 120px;
+        position: relative;
+            .fter__nav{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                .fter__logo{
+                    padding-right: 50px;
+                    img{
+                        width: 137px;
+                        height: 58px;
+                    }
+                }
+                .fter__links{
+                    a{
+                        padding-right: 30px;
+                        @include text($tertiaryColor, lowercase, none, 500, 14px);
+                        transition: 300ms ease;
+                        position: relative;
+                        i{
+                            color: $secondaryColor;
+                        }
+                        &::before{
+                            content: '';
+                            display: block;
+                            background-color: $secondaryColor;
+                            position: absolute;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            top: 120%;
+                            left: 30%;
+                            transition: 300ms ease;
+                            opacity: 0;
+                        }
+                        &:hover::before{
+                            opacity: 1;
+                        }
+                        &:hover{
+                            color: #fff;                    
+                        }
+                    }
+                }
+                
+            }
+    }
+    .fter__info{
+        .fter__block{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 25px;
+            p{
+                padding-left: 15px;
+                @include text($secondaryColor, none, normal, 500, 14px);
+            }
+            .fter__icon{
+                background-color: $secondaryColor;
+                border-radius: 50%;
+                i{
+                    padding: 10px 30px 10px 10px;
+                    color: $primaryColor;
+                    @include text($primaryColor, none, normal, 600, 20px);
+                }
+            }
+        }
+    }
+    .fter__line{
+        display: flex;
+        flex-direction: column;
+        .fter__anchor{
+            position: absolute;
+            left: 0;
+            @include text($secondaryColor, none, normal, 700, 30px);
+        }
+        .fter__sns{
+            position: absolute;
+            right: 0;
+            padding: 40px 50px 0 0;
+            img{
+                width: 30px;
+                padding: 10px;
+                box-sizing: content-box;
+            }
+        }
+        .fter__copyright{
+            position: absolute;
+            bottom: -80px;
+            p{
+                @include text($tertiaryColor, none, normal, 700, 14px);
             }
         }
     }

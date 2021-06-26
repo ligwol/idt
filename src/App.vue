@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="home__mobile-hder" v-if="mobileView">
+    <div class="home__mobile-hder">
       <div class="hder__click-button" @click="showNav = !showNav" :class="{icon__open:showNav}">
         <i id ="hder__icon" class="fas fa-ellipsis-v"></i>
       </div>
@@ -17,6 +17,8 @@
     </div>
     <About />
     <OurTechnologies />
+    <Contacts />
+    <Footer />
   </div>
 </template>
 
@@ -26,6 +28,8 @@ import HeaderMobile from './components/HeaderMobile.vue'
 import HomeMobile from './components/HomeMobile.vue'
 import About from './components/About.vue'
 import OurTechnologies from './components/OurTechnologies.vue'
+import Contacts from './components/Contacts.vue'
+import Footer from './components/Footer.vue'
 export default {
   name: 'Page',
   data: function (){
@@ -45,6 +49,8 @@ export default {
     HomeMobile,
     About,
     OurTechnologies,
+    Contacts,
+    Footer,
   },
   created() {
     this.handleView();
@@ -88,5 +94,16 @@ export default {
           }
         }
       }
+    }
+    .home__mobile-hder{
+          display: none;
+    }
+    @media screen and (max-width: 1140px){
+        .home{
+            display: none;
+        }
+        .home__mobile-hder{
+          display: block;
+        }
     }
 </style>

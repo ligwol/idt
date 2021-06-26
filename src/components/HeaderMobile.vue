@@ -4,7 +4,7 @@
             <a href="#">home</a>
             <a href="#about-us">about us</a>
             <a href="#our-technologies">our technologies</a>
-            <a href="#contakts">contakts</a>
+            <a href="#contacts">contakts</a>
         </nav>
         <div class="hder__phone">
             <i class="fas fa-phone"></i>
