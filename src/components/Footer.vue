@@ -38,21 +38,21 @@
         <div class="fter__info">
             <div class="fter__block">
                 <div class="fter__icon">
-                    <i class="fa-fw fas fa-map-marker"></i>
+                    <i class="fas fa-map-marker"></i>
                 </div>
-                <p>Praha 8, Troja, Pomořanská 475/8</p>
+                <a href="https://goo.gl/maps/X1cGQU61G8mrkNc39">Praha 8, Troja, Pomořanská 475/8</a>
             </div>
             <div class="fter__block">
                 <div class="fter__icon">
-                    <i class="fa-fw fas fa-phone"></i>
+                    <i class="fas fa-phone"></i>
                 </div>
-                <p>+422 2222222</p>
+                <a href="tel:+4222222222">+422 2222222</a>
             </div>
             <div class="fter__block">
                 <div class="fter__icon">
-                    <i class="fa-fw fas fa-envelope"></i>
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <p>josef.novotny@ltd.com</p>
+                <a href="mailto:josef.novotny@ltd.com">josef.novotny@ltd.com</a>
             </div>
         </div>
     </div>

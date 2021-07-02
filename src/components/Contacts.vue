@@ -6,19 +6,19 @@
                 <div class="contacts__icon">
                     <i class="fas fa-phone"></i>                    
                 </div>
-                <p>+422 2222222</p>
+                <a href="tel:+4222222222">+422 2222222</a>
             </div>
             <div class="contacts__block">
                 <div class="contacts__icon">
                     <i class="fas fa-map-marker"></i>                    
                 </div>
-                <p>Praha 8, Troja, Pomořanská 475/8</p>
+                <a href="https://goo.gl/maps/X1cGQU61G8mrkNc39">Praha 8, Troja, Pomořanská 475/8</a>
             </div>
             <div class="contacts__block">
                 <div class="contacts__icon">
                     <i class="fas fa-envelope"></i>                    
                 </div>
-                <p>josef.novotny@ltd.com</p>
+                <a href="mailto:josef.novotny@ltd.com">josef.novotny@ltd.com</a>
             </div>
         </div>
         <div class="contacts__links">
@@ -33,29 +33,20 @@
             </div>
 
             <div class="contacts__form">
-            <form>
-                <div class="form__put-in">
-                    <div class="form__label">
-                        <label for="fname">Name</label>
-                        <input class="fome__input fname" type="text" placeholder="Lorem ipsum">
-
-                    </div>
-                    <div class="form__label">
-                        <label for="fphone">Phone number</label>
-                        <input class="fome__input fphone" type="tel" placeholder="+4333 33333333"
-                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-                    </div>
-                </div>
-                <input class="button" type="submit" value="contact us" >
-            </form>
+                <FormCall/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import FormCall from './FormCall'
 export default {
     name: "Contacts",
+    components: {
+        FormCall,
+    }
+
 }
 </script>
 
