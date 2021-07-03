@@ -4,8 +4,7 @@
                 <div class="form__put-in">
                     <div class="form__label">
                         <label for="fname">Name</label>
-                        <input class="fome__input fname" type="text" placeholder="Lorem ipsum" maxlength="32" minlength="6">
-
+                        <input class="fome__input fname" type="text" v-model="name" @keydown="nameKeydown($event)" placeholder="Lorem ipsum" maxlength="32" minlength="6"/>
                     </div>
                     <div class="form__label">
                         <label for="fphone">Phone number</label>
@@ -23,8 +22,21 @@ export default {
     name: "FormCall",
     data: function () {
         return{
+            name: "",
+        }
+    }, 
+    watch: {
+        name(val) {
+        this.name = val.replace(/\W/g, "");
+        },
+    },
+    methods: {
+        nameKeydown(e) {
+        if (/^\W$/.test(e.key)) {
+            e.preventDefault();
         }
     },
+  },
 }
 </script>
 
