@@ -4,7 +4,7 @@
                 <div class="form__put-in">
                     <div class="form__label">
                         <label for="fname">Name</label>
-                        <input class="fome__input fname" type="text" placeholder="Lorem ipsum">
+                        <input class="fome__input fname" type="text" placeholder="Lorem ipsum" maxlength="32" minlength="6">
 
                     </div>
                     <div class="form__label">
