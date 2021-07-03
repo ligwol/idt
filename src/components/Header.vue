@@ -15,9 +15,9 @@
                     <a href="#contacts">contakts</a>
                 </nav>
             </div>
-            <div class="hder__phone" :class="{change_color: scrollPosition > 100}">
-                <a href="tel:+422 2222222">+422 2222222</a>
-                <i class="fas fa-phone"></i>
+            <div class="hder__phone" >
+                <a href="tel:+422 2222222" :class="{change_color: scrollPosition > 100}">+422 2222222</a>
+                <i class="fas fa-phone" :class="{change_color: scrollPosition > 100}"></i>
             </div>
         </header>
 

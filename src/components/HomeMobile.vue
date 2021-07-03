@@ -10,32 +10,41 @@
             </p>
         </div>
 
-        <div class="home__form">
-            <form>
-                <div class="form__put-in">
-                    <div class="form__label">
-                        <label for="fname">Name</label>
-                        <input class="fome__input fname" type="text" placeholder="Lorem ipsum">
-
-                    </div>
-                    <div class="form__label">
-                        <label for="fphone">Phone number</label>
-                        <input class="fome__input fphone" type="tel" placeholder="+4333 33333333"
-                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-                    </div>
-                </div>
-                <input class="home__button" type="submit" value="contact us" >
-            </form>
-        </div>
+        <FormCall/>
     </div>
 </template>
 
 <script>
+import FormCall from './FormCall'
 export default {
     name: "HomeMobile",
+        components: {
+            FormCall,
+        }
+    
 }
 </script>
 
 <style lang="scss" scoped>
     @import "./../assets/style-mobile.scss";
+    @media screen and (max-width: 540px){
+        .home__page{
+            .home__text{
+                h1{
+                    font-size: 25px;
+                    b{
+                        font-size: 50px;
+                    }
+                }
+            }
+            .home__form{
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                padding: 50px 0;
+                width: 100%;
+            }
+        }
+    }
 </style>

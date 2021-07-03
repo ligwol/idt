@@ -78,16 +78,55 @@ export default {
 <style lang="scss" scoped>
     @import "./../assets/style.scss";
     @media  screen and(max-width: 1140px) {
-        .about-us{
+    .about-us{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-bottom: 20px;
+        .about-us__section{
+            background-image: none;
+            padding-bottom: 40px;
+        }
+        
+    }
+}
+@media  screen and(max-width:600px) {
+    .about-us{
+       margin-top: 0;
+       padding: 0 40px;
+        .about-us__section{
+            background-image: none;
+            padding-bottom: 40px;
+        }
+        .about-us__aside{
             display: flex;
-            flex-direction: column;
-            align-items: start;
-            padding-bottom: 20px;
-            .about-us__section{
-                background-image: none;
-                padding-bottom: 40px;
+            justify-content: start;
+            padding: 0;
+            .about-us__list{
+                .about-us__point{
+                    padding-bottom: 20px;
+                    .about-us__big-point{
+                        display: none;
+                    }
+                }
+                .about-us__bullets{
+                    display: none;
+                }
             }
-            
         }
     }
+}
+@media  screen and(max-width:450px) {
+    .about-us{
+        .about-us__aside{
+            .about-us__list{
+                .about-us__point{
+                    .about-us__icon{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
 </style>

@@ -9,8 +9,7 @@
                     </div>
                     <div class="form__label">
                         <label for="fphone">Phone number</label>
-                        <input class="fome__input fphone" type="tel" placeholder="+4333 33333333"
-                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                        <InputMask mask="+9999-99999999" v-model="val1" placeholder="+4333 33333333" class="fome__input fphone" />
                     </div>
                 </div>
                 <input class="button" type="submit" value="contact us" >
@@ -31,4 +30,54 @@ export default {
 
 <style lang="scss" scoped>
     @import "./../assets/style.scss";
+
+    @media screen and (max-width: 540px) {
+        .home__page {
+            form {
+                display: flex;
+                flex-direction: column;
+
+                .form__put-in {
+                    display: flex;
+                    flex-direction: column;
+
+                    .form__label {
+                        padding-top: 20px;
+
+                        label {
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .button {
+                    width: 250px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .home__page {
+            form {
+                display: flex;
+                flex-direction: column;
+
+                .form__put-in {
+                    display: flex;
+                    flex-direction: column;
+
+                    .form__label {
+                        padding-top: 20px;
+
+                        label {
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .button {
+                    width: 250px;
+                }
+            }
+        }
+    }
 </style>

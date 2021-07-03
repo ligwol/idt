@@ -96,6 +96,10 @@ $vw-viewport: 1920;
         a{
             padding-right: 15px;
             @include text($secondaryColor, lowercase, normal, 500, 14px);
+            &.change_color{
+                
+            @include text($tertiaryColor, lowercase, normal, 500, 14px);
+            }
             
         }
         i{
@@ -103,17 +107,15 @@ $vw-viewport: 1920;
             background-color: $secondaryColor;
             border-radius: 50%;
             color: $primaryColor;
+            &.change_color{
+                
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            }
         }
     }
     .change_color {
         transition: all .1s ease-out;
-        a{
-            @include text($tertiaryColor, lowercase, normal, 500, 14px);
-        }
-        i{
-            background-color: $primaryColor;
-            color: $secondaryColor;
-        }
     }
 }
 .change_color {
