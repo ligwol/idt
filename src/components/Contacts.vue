@@ -54,30 +54,48 @@ export default {
     @import "./../assets/style.scss";
     @media  screen and (max-width: 1160px) {
         .contacts{
+            padding-top: 40px;
+            box-sizing: border-box;
             .contacts__info{
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 40px 20px;
                 .contacts__block{
-                    padding-bottom: 20px;
                 }
             }
 
             .contacts__links{
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                padding: 0;
                 .contacts__sns{
-                    padding-bottom: 80px;
+                    padding: 20px;
                 }
-                 .contacts__form{
-                    form{
-                        .form__put-in{
-                            flex-direction: column;
-                            align-items: center;   
-                        }
-                    }
+                .contacts__form{
+                    padding: 20px;
                 }
             }
 
+        }
+    }
+    @media screen and (max-width: 500px){
+        .contacts{
+            .contacts__info{
+                    text-align: left;
+                .contacts__block{
+                    padding-left: 30px;
+                    padding-bottom: 30px;
+                    align-items: center;
+                    .contacts__icon{
+                        width: 30px;
+                        height: 30px;
+                        background-color: transparent;
+                        color: #269f58;
+                    }
+                }
+            }
         }
     }
 </style>

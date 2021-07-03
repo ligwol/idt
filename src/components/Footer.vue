@@ -118,4 +118,27 @@
             }
         }
     }
+    @media screen and (max-width: 430px) {
+        
+        .fter {
+            .fter__menu {
+                .fter__line{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .fter__info{
+                .fter__block{
+                    .fter__icon{
+                        background-color: transparent;
+                        i{
+                            padding-left: 12px;
+                            padding-top: 12px;
+                            @include text($secondaryColor, none, normal, 600, 20px);
+                        }
+                    }
+                }
+            } 
+        }
+    }
 </style>

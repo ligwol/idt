@@ -279,8 +279,7 @@ $vw-viewport: 1920;
 .our-technologies {
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    padding: 0 0 20px 40px;
+    padding: 0 0 0 40px;
 
     .our-technologies__section {
         flex-basis: 50%;
@@ -299,7 +298,7 @@ $vw-viewport: 1920;
             flex-wrap: wrap;
 
             .technologies__logo {
-                padding: 3vw;
+                padding: get-vw(50px);
                 opacity: 50%;
                 display: flex;
                 flex-direction: column;
@@ -319,12 +318,11 @@ $vw-viewport: 1920;
                 &.active {
                     opacity: 100%;
                     transform: scale(1.5);
-                    padding: 1.5;
-
+                    padding: get-vw(50px);;
+                    box-sizing: content-box;
                     p {
                         opacity: 100%;
                         @include text($tertiaryColor, none, normal, 500, 16px);
-                        padding-top: 10px;
                     }
                 }
             }
@@ -368,7 +366,7 @@ $vw-viewport: 1920;
     background-image: url(../../images/background-4.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    padding: 50px 0 50px 0;
+    padding: 0 0 50px 0;
     height: 100%;
     h2{
         @include text($primaryColor, none, normal, 700, 36px);

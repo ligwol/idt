@@ -6,7 +6,6 @@
             </h2>
             <div class="our-technologies__list">
                 <div class="technologies__logo" v-for="(item, index) in tech_item" :key="index" @click="activeIndex = index" :class="{active: activeIndex === index}">
-                    <!-- <img src="{{ item.src }}" alt="{{ item.alt }}"/> -->
                     <img :src="item.src" :alt="item.alt" />
                     <p>{{item.title}}</p>
                 </div>
@@ -115,36 +114,62 @@ export default {
 
 <style lang="scss" scoped>
     @import "./../assets/style.scss";
-    /*@media screen and (max-width: 1140px){
-        .our-technologies{
+
+    @media screen and (max-width: 1140px) {
+        .our-technologies {
             display: flex;
             flex-direction: column;
-            background: none;
-            margin: 0 auto;
-            padding: 40px;
-            .our-technologies__section{
-                .technologies{
-                    .technologies__logo{
-                        &.active{
-                            p{
-                                @include text($tertiaryColor, none, normal, 500, 0.5rem);
-                                padding-top: 0.1rem;
-                            }
+            padding: 0;
+
+            .our-technologies__section {
+                padding: 0 20px 20px 20px;
+                flex-basis: 20%;
+                .our-technologies__list {
+                    flex-wrap: wrap;
+
+                    .technologies__logo {
+                        padding: get-vw(40px) get-vw(80px);
+                        transition: 500ms ease;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        p {
+                            opacity: 50%;
+                        }
+
+                        img {
+                            display: none;
+                        }
+
+                        &.active {
+                            opacity: 100%;
+                            transform: scale(1.5);
+                            padding: get-vw(50px);
+                            box-sizing: content-box;
                         }
                     }
-                    
                 }
             }
-            .our-technologies__aside{
-                .technologies__info.technologies__info{
-                    padding: 70px;
-                    background-image: url(../../images/background-3.png);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 50px;
+
+            .our-technologies__aside {
+                flex-basis: 80%;
+                .technologies__info {
+                    background-size: contain;
+                    border-radius: 0;
+                    overflow-y: scroll;
+                    h2 {
+                        @include text($secondaryColor, none, normal, 500, 36px);
+                        text-align: center;
+                        padding: 40px 20px;
+                    }
+
+                    p {
+                        @include text($secondaryColor, none, normal, 400, 14px);
+                        padding: 40px 20px;
+                    }
                 }
             }
         }
-    }*/
+    }
 </style>

@@ -69,7 +69,6 @@ export default {
         }
     }
     @media screen and (max-width: 900px) {
-        .home__page {
             form {
                 display: flex;
                 flex-direction: column;
@@ -87,9 +86,8 @@ export default {
                     }
                 }
                 .button {
-                    width: 250px;
+                    width: 200px;
                 }
             }
-        }
     }
 </style>

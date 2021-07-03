@@ -2,23 +2,31 @@
   <div class="main">
     <div class="home__mobile-hder">
       <div class="hder__click-button" @click="showNav = !showNav" :class="{icon__open:showNav}">
-        <i id ="hder__icon" class="fas fa-ellipsis-v"></i>
+        <i id="hder__icon" class="fas fa-ellipsis-v"></i>
       </div>
       <div class="hder__close" :class="{hder__open:showNav}">
         <HeaderMobile />
       </div>
       <div class="home__mobile">
-        <HomeMobile/>
-      </div>      
+        <HomeMobile />
+      </div>
     </div>
 
     <div class="home" v-if="!mobileView">
-        <Header />
+      <Header />
     </div>
-    <About />
-    <OurTechnologies />
-    <Contacts />
-    <Footer />
+    <div class="app__about">
+      <About />
+    </div>
+    <div class="app__our-technologies">
+      <OurTechnologies />
+    </div>
+    <div class="app__contacts">
+      <Contacts />
+    </div>
+    <div class="app__footer">
+      <Footer />
+    </div>
   </div>
 </template>
 
